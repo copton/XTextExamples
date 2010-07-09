@@ -1,9 +1,6 @@
-castle Simple
-definitions {
-	action knightArrives plays "tadaa.wav"
-	location drawbridge is defined by scanner 048243
-	thing knight is tagged with 83233
-}
-rules {
-	if knight enters drawbridge then knightArrives
-}
+/*
+ * This is an example model
+ */
+Hello world!
+Hello Xtext!
+Hello Eclipse!
