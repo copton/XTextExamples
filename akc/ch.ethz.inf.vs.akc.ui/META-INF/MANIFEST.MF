@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ch.ethz.inf.vs.akc.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: ch.ethz.inf.vs.akc.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: ch.ethz.inf.vs.akc;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
+ org.eclipse.xtext.builder,
+ org.antlr.runtime
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: ch.ethz.inf.vs.akc.ui.contentassist.antlr
+Bundle-Activator: ch.ethz.inf.vs.akc.ui.internal.ConfigActivator

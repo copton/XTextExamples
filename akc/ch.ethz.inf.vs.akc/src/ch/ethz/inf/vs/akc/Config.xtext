@@ -1,0 +1,27 @@
+grammar ch.ethz.inf.vs.akc.Config with org.eclipse.xtext.common.Terminals
+
+generate config "http://www.ethz.ch/inf/vs/akc/Config"
+
+Castle:
+    'castle' name=ID
+	'definitions:'
+		(definitions+=Definition)*
+	
+	'rules:'
+		(rules+=Rule)*
+	;
+	
+Definition:
+	Thing | Location | Action;
+	
+Thing:
+	'thing' name=ID 'is tagged with' tag=INT;
+	
+Location:
+	'location' name=ID 'is defined by scanner' scanner=INT;
+	
+Action:
+	'action' name=ID 'plays' file=STRING;
+	
+Rule:
+	'if' thing=[Thing] 'enters' location=[Location] 'then' action=[Action];

@@ -1,0 +1,12 @@
+castle Simple
+
+definitions:
+	action knightArrives plays "tadaa.wav"
+	action danger plays "ohoh.wav"
+	location drawbridge is defined by scanner 048243
+	location vulcan is defined by scanner 87732
+	thing knight is tagged with 83233
+
+rules:
+	if knight enters drawbridge then knightArrives
+	if knight enters vulcan then danger

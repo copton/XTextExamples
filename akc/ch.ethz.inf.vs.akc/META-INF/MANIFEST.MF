@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ch.ethz.inf.vs.akc
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: ch.ethz.inf.vs.akc; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ com.ibm.icu;resolution:=optional,
+ org.eclipse.xtext.xtend;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: ch.ethz.inf.vs.akc,
+ ch.ethz.inf.vs.akc.services,
+ ch.ethz.inf.vs.akc.config,
+ ch.ethz.inf.vs.akc.config.impl,
+ ch.ethz.inf.vs.akc.config.util,
+ ch.ethz.inf.vs.akc.parseTreeConstruction,
+ ch.ethz.inf.vs.akc.parser.antlr,
+ ch.ethz.inf.vs.akc.parser.antlr.internal,
+ ch.ethz.inf.vs.akc.validation

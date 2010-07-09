@@ -1,0 +1,4 @@
+import ch::ethz::inf::vs::akc::config;
+
+//sortedGreetings(Model this) :
+//	this.greetings.sortBy(g|g.name.toLowerCase());

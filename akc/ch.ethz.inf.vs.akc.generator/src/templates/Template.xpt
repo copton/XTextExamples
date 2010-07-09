@@ -1,0 +1,15 @@
+«IMPORT ch::ethz::inf::vs::akc::config»
+
+«EXTENSION templates::Extensions»
+
+«DEFINE main FOR Castle-»
+«FILE name+".c"-»
+void onEvent(int scanner, int tag) {
+	«EXPAND handleRule FOREACH rules»
+}
+«ENDFILE-»
+«ENDDEFINE»
+
+«DEFINE handleRule FOR Rule-»
+	if (tag == «thing.tag» && scanner == «location.scanner») play("«action.file»");
+«ENDDEFINE»
